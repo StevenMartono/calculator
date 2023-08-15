@@ -4,15 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="calculator">
-        <div class="display-number">
-            
-        </div>
-        <div class="num-pad">
-            
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display-number">
+                    <input type="text" name="display" id="display-number-input" readonly>
+                </div>
+                <div class="num-pad">
+                    <!-- AC, DE, ., / -->
+                    <div class="num-dap1">
+                        <input type="button" value="AC" onclick="clearDisplay()">
+                        <input type="button" value="DE" onclick="deleteNumber()">
+                        <input type="button" value="." onclick="addToDisplay(value)">
+                        <input type="button" value="/" onclick="addToDisplay(value)">
+                    </div>
+                    <!-- 7, 8, 9, X -->
+                    <div class="num-pad2">
+                        <input type="button" value="7" onclick="addToDisplay(value)">
+                        <input type="button" value="8" onclick="addToDisplay(value)">
+                        <input type="button" value="9" onclick="addToDisplay(value)">
+                        <input type="button" value="*" onclick="addToDisplay(value)">
+                    </div>
+                    <!-- 4, 5, 6, - -->
+                    <div class="num-pad3">
+                        <input type="button" value="4" onclick="addToDisplay(value)">
+                        <input type="button" value="5" onclick="addToDisplay(value)">
+                        <input type="button" value="6" onclick="addToDisplay(value)">
+                        <input type="button" value="-" onclick="addToDisplay(value)">
+                    </div>
+                    <!-- 1, 2, 3, + -->
+                    <div class="num-pad4">
+                        <input type="button" value="1" onclick="addToDisplay(value)">
+                        <input type="button" value="2" onclick="addToDisplay(value)">
+                        <input type="button" value="3" onclick="addToDisplay(value)">
+                        <input type="button" value="+" onclick="addToDisplay(value)">
+                    </div>
+                    <!-- 00, c, = -->
+                    <div class="num-pad5">
+                        <input type="button" value="0" onclick="addToDisplay(value)">
+                        <input type="button" value="C" onclick="clearDisplay()">
+                        <input type="button" value="=" class="sama-dengan" onclick="count()">
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </body>
+<script src="index.js"></script>
 </html>
